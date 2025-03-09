@@ -1,0 +1,30 @@
+@use "_variables" as variables;
+// Single Components
+
+// Logo
+.logo {
+  width: 134.85px;
+  height: auto;
+}
+
+// Button
+.btn-request {
+  @include variables.text-present3;
+  background-color: variables.$green;
+  color: variables.$blue-950;
+  padding: variables.$sp-100 variables.$sp-400;
+  border: none;
+  border-radius: 28px;
+  width: 172px;
+  height: 44px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: mix(variables.$white, variables.$green, 50%);
+  }
+
+  // Button mobile
+  @media (max-width: 375px) {
+    width: 303px;
+  }
+}

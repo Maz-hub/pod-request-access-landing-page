@@ -1,5 +1,7 @@
 @use "_variables";
+@use "_components";
 
+// CSS Reset
 *,
 *::before,
 *::after {
@@ -10,6 +12,7 @@
 body {
   height: 100%;
   font-family: variables.$font-family;
+  background-color: variables.$blue-950;
   line-height: 1.6;
 }
 
@@ -37,4 +40,12 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+// Global Styles
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
