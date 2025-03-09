@@ -1,5 +1,6 @@
 @use "_variables" as variables;
-// Single Components
+
+// SINGLE COMPONENTS
 
 // Logo
 .logo {
@@ -8,23 +9,104 @@
 }
 
 // Button
-.btn-request {
-  @include variables.text-present3;
-  background-color: variables.$green;
-  color: variables.$blue-950;
-  padding: variables.$sp-100 variables.$sp-400;
-  border: none;
-  border-radius: 28px;
-  width: 172px;
-  height: 44px;
-  cursor: pointer;
 
-  &:hover {
-    background-color: mix(variables.$white, variables.$green, 50%);
+// textfield-mobile
+@media (max-width: 375px) {
+  .email-request {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: variables.$sp-100;
+
+    input[type="email"] {
+      @include variables.text-present3;
+      background-color: variables.$blue-900;
+      color: variables.$white;
+      padding: variables.$sp-300;
+      border: none;
+      outline: none;
+      border-radius: 28px;
+      width: 303px;
+      height: 44px;
+
+      &:focus {
+        outline: none;
+      }
+
+      &.error {
+        input[type="email"] {
+          border: 2px solid variables.$red;
+        }
+      }
+    }
+  }
+}
+
+// GROUOP COMPONENTS
+// Form
+.email-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 448px;
+  max-width: 100%;
+
+  input[type="email"] {
+    @include variables.text-present3;
+    background-color: variables.$blue-900;
+    color: variables.$white;
+    border: none;
+    width: 448px;
+    height: 52px;
+    max-width: 100%;
+    border-radius: 28px;
+    padding-right: 180px;
+    padding-left: 24px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: variables.$white;
+      opacity: 0.5;
+    }
+
+    &.error {
+      border: 2px solid variables.$red;
+    }
   }
 
-  // Button mobile
-  @media (max-width: 375px) {
-    width: 303px;
+  .btn-request {
+    @include variables.text-present3;
+    background-color: variables.$green;
+    color: variables.$blue-950;
+    padding: variables.$sp-300;
+    border: none;
+    border-radius: 28px;
+    width: 173px;
+    height: 44px;
+    cursor: pointer;
+
+    position: absolute;
+    right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: mix(variables.$white, variables.$green, 50%);
+    }
+  }
+
+  .error-message {
+    font-size: 12px;
+    font-weight: bold;
+    color: variables.$red;
+    margin-left: variables.$sp-400;
+    padding-top: variables.$sp-1100;
+    position: absolute;
+
+    display: none;
   }
 }
