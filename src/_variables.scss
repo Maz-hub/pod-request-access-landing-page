@@ -1,0 +1,44 @@
+// Colors
+$green: #54e6af;
+$blue-950: #121725;
+$blue-900: #2c344b;
+$blue-600: #5a668a;
+$blue-399: #c2cbe5;
+$white: #ffffff;
+$red: #fb3e3e;
+
+// Typography
+$font-family: "Chivo Light", sans-serif;
+
+@mixin text-present1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+@mixin text-present2 {
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+@mixin text-present3 {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 200%;
+  letter-spacing: 0px;
+}
+
+// Spacing
+$sp-1300: 104px;
+$sp-1100: 88px;
+$sp-1000: 80px;
+$sp-800: 64px;
+$sp-700: 56px;
+$sp-500: 40px;
+$sp-400: 32px;
+$sp-300: 24px;
+$sp-200: 26px;
+$sp-100: 8px;
+$sp-50: 4px;
