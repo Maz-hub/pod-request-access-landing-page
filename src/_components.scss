@@ -8,39 +8,7 @@
   height: auto;
 }
 
-// Button
-
 // textfield-mobile
-@media (max-width: 375px) {
-  .email-request {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: variables.$sp-100;
-
-    input[type="email"] {
-      @include variables.text-present3;
-      background-color: variables.$blue-900;
-      color: variables.$white;
-      padding: variables.$sp-300;
-      border: none;
-      outline: none;
-      border-radius: 28px;
-      width: 303px;
-      height: 44px;
-
-      &:focus {
-        outline: none;
-      }
-
-      &.error {
-        input[type="email"] {
-          border: 2px solid variables.$red;
-        }
-      }
-    }
-  }
-}
 
 // GROUOP COMPONENTS
 // Form
@@ -55,6 +23,7 @@
     @include variables.text-present3;
     background-color: variables.$blue-900;
     color: variables.$white;
+    box-sizing: border-box;
     border: none;
     width: 448px;
     height: 52px;
@@ -62,6 +31,7 @@
     border-radius: 28px;
     padding-right: 180px;
     padding-left: 24px;
+    caret-color: variables.$green;
 
     &:focus {
       outline: none;
@@ -108,5 +78,34 @@
     position: absolute;
 
     display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 303px;
+    margin: 0 auto;
+
+    input[type="email"] {
+      width: 100%;
+      height: 44px;
+      padding: variables.$sp-300;
+      border-radius: 28px;
+      box-sizing: border-box;
+    }
+
+    .btn-request {
+      position: relative;
+      width: 100%;
+      height: 44px;
+      margin-top: variables.$sp-100;
+      margin-left: variables.$sp-100;
+
+      border-radius: 28px;
+    }
   }
 }
