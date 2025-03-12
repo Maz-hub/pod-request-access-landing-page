@@ -10,14 +10,15 @@
 <body>
   <main class="wrapper">
     <!-- Logo -->
-    <header class="header">
-      <img src="/assets/desktop/logo.svg" alt="Pod logo" class="logo">
-    </header>
     <section class="main">
+      <header class="header">
+        <img src="/assets/desktop/logo.svg" alt="Pod logo" class="logo">
+      </header>
+
       <div class="content">
         <!-- Title -->
         <h1 class="title">
-          <span class="title-green">Publish your podcasts</span>
+          <span class="title-green">Publish your podcasts</span><br>
           <span class="title-white"> everywhere.</span>
         </h1>
         <!-- Text -->
@@ -36,8 +37,6 @@
         </form>
 
 
-
-
         <!-- Platform Icons -->
         <div class="platforms">
           <a href="https://www.spotify.com" target="_blank" rel="noopener">
@@ -54,8 +53,10 @@
           </a>
         </div>
       </div>
-      <!-- Background Image -->
-      <div class="bg-image">
+    </section>
+    <!-- Background Image -->
+    <section class="bg-image">
+      <div>
         <picture>
           <source media="(min-width: 1024px)" srcset="/assets/desktop/image-host.svg">
           <source media="(min-width: 768px)" srcset="/assets/tablet/image-host.svg">
@@ -65,6 +66,7 @@
       </div>
     </section>
   </main>
+
   <script type="module" src="/src/main.js"></script>
 </body>
 

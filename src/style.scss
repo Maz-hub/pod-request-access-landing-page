@@ -42,10 +42,31 @@ h6 {
   overflow-wrap: break-word;
 }
 
-// Global Styles
-wrapper {
+.wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  margin-left: 10rem;
+  margin-top: 9.563rem;
+}
+
+.logo {
+  height: 3.5rem;
+}
+
+.content {
+  margin-top: 6.5rem;
+}
+
+.title {
+  @include variables.text-present1;
+  padding-top: 5.5rem;
+}
+
+.title-green {
+  color: variables.$green;
+}
+
+.title-white {
+  color: variables.$white;
 }
